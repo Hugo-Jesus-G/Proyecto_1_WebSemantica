@@ -18,9 +18,9 @@
         <div class="form-container">
             
             <div class="card p-4" style="width: 100%; max-width: 450px; height: 350px;">
-                <h3 class="text-center mb-4">Iniciar Sesión</h3>
+                <h3 class="text-center mb-4">Registrate</h3>
                 <form method="post">
-                <?php include ("../controladores/controladoresLogin.php") ?>
+                <?php include ("../controladores/controladorRegistro.php") ?>
 
               
 
@@ -37,7 +37,7 @@
                     </div>
                 </form>
             </div>
-        </div>/
+        </div>
     </main>
 
    

@@ -26,16 +26,22 @@
 
                     <div class="mb-3">
                         <label for="username" class="form-label">Nombre de Usuario</label>
-                        <input type="text" name="usuario" class="form-control entrada entrada" id="username" placeholder="Ingresa tu usuario">
+                        <input type="text" name="usuario" class="form-control entrada entrada" id="username" placeholder="Ingresa un nombre de usuario">
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" name="contraseña" class="form-control entrada" id="password" placeholder="Ingresa tu contraseña">
+                        <input type="password" name="contraseña" class="form-control entrada" id="password" placeholder="Ingresa una contraseña">
                     </div>
                     <div class="d-grid boton">
-                        <button type="submit" name="enviar" class="btn btn-primary">Iniciar Sesión</button>
+                        <button type="submit" name="enviar" class="btn btn-primary">Registrar</button>
                     </div>
                 </form>
+
+                <div class="contenedor">
+
+            <div class="hijo"><p>Ya tienes cuenta?</p></div>
+            <div class="hijo"><a href="../pages/index.php">Iniciar Sesion</a></div>
+            </div>
             </div>
         </div>
     </main>

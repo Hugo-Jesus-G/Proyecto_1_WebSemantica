@@ -36,7 +36,15 @@
                         <button type="submit" name="enviar" class="btn btn-primary">Iniciar Sesión</button>
                     </div>
                 </form>
+            
+            
+            <div class="contenedor">
+
+            <div class="hijo"><p>No tienes cuenta?</p></div>
+            <div class="hijo"><a href="../pages/registro.php">Registrate</a></div>
             </div>
+
+</div>
         </div>
     </main>
 

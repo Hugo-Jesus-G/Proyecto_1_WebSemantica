@@ -27,6 +27,8 @@
     font-size: 30px;
   }
 
+  
+
   .roboto-mono{
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
@@ -41,7 +43,7 @@
   }
   
 .boton{
-border-radius: 100%;
+border-radius: 10%;
 }
 
 #botonA{
@@ -67,4 +69,21 @@ border-radius: 100%;
 .agenda{
  
   font-size: 20px;
+}
+
+.contenedor{
+
+
+  display:flex ;
+}
+
+
+.hijo{
+
+
+width: 50%;
+padding: 5px;
+
+margin-top: 5px;
+
 }

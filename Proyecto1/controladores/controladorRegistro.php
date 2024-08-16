@@ -13,7 +13,7 @@ if (isset($_POST['enviar'])) {
 
 
 
-    if ($_POST['nombre'] !== "" && $_POST['contraseña'] !== "") {
+    if ($_POST['usuario'] !== "" && $_POST['contraseña'] !== "") {
 
 
         $nombre = $_POST['usuario'];
@@ -32,7 +32,7 @@ if (isset($_POST['enviar'])) {
 
 
 
-            echo ("<div id='nombreR' class=' alert alert-danger p-1 mb-0 text-center' role='alert' >EL nombre de usuario ya ha sido registrado</div> <br>");
+            echo ("<div id='nombreR' class=' alert alert-danger p-1 my-0 text-center' role='alert' >EL nombre de usuario ya ha sido registrado</div> <br>");
         } else {
 
             $nombreValidar = true;
@@ -49,7 +49,7 @@ if (isset($_POST['enviar'])) {
             if ($respuesta) {
 
 
-                echo ("<div id='exito' class='alert alert-success text-center mb-0' role='alert'>Registrado correctamente</div> ");
+                echo ("<div id='exito' class='alert alert-success text-center my-0' role='alert'>Registrado correctamente</div> ");
             } else {
 
 

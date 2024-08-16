@@ -9,6 +9,8 @@
     background-image: url("../assets/fondo.jpeg");
     background-size: cover;
     background-position: center;
+    /* altura en la ventana del navegador */
+    min-height: 50vh;
 }
 .form-container {
     height: 100vh;
@@ -17,13 +19,12 @@
     align-items: center;
   
 }
-
-
 .playwrite-fr-moderne {
     font-family: "Playwrite FR Moderne", system-ui;
     font-optical-sizing: auto;
     font-weight: 800px;
     font-style: normal;
+    font-size: 30px;
   }
 
   .roboto-mono{
@@ -37,16 +38,33 @@
   .lato-black {
     font-family: "Lato", system-ui;
     font-weight: 900;
-    font-style: normal;
   }
   
 .boton{
-
 border-radius: 100%;
-
 }
 
-footer{
-    background-color: rgb(252, 252, 199);
-    
+#botonA{
+  border-radius: 20%;
+  background-color: rgb(249, 228, 197);
+  font-size:18px;
+  font-style:italic;
+  width: 100px;
+  height: 45px;
+}
+
+#contacto{
+  background-color: rgba(246, 172, 140, 0.944);
+  min-height: 30vh;
+}
+
+.navbar{
+  min-height: 5vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+}
+
+.agenda{
+ 
+  font-size: 20px;
 }

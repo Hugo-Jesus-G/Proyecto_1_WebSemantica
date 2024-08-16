@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="San Andres">
+
+    <link rel="shortcut icon" href="../assets/icono.webp" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,30 +20,54 @@
         href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Karla:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+FR+Moderne&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
 
-        <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <title>Cholula</title>
 </head>
 
 <body>
     <header>
-
+        <nav class="navbar navbar-expand-lg  fixed-top" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand roboto-mono" href="#">H&M Trips</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active roboto-mono" aria-current="page" href="#">Reserva</a>
+                        </li>
+                        <li class="nav-item roboto-mono">
+                            <a class="nav-link" href="#">Barrios</a>
+                        </li>
+                        <li class="nav-item roboto-mono">
+                            <a class="nav-link" href="#">Ubicación</a>
+                        </li>
+                        <li class="nav-item roboto-mono">
+                            <a class="nav-link disabled" aria-disabled="true">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
-        <section class="intro py-5 text-center container">
+        <section class="intro py-5 text-center container-fluid">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="fw-light text-white playwrite-fr-moderne">San Andres Cholula</h1>
 
-                    <a href="#" class="btn btn-primary my-2">Ubicación</a>
-                    <a href="#" class="btn btn-secondary my-2">Sitio</a>
-                    </p>
+                    <a href="https://maps.app.goo.gl/ZgG5LCo8maFiXkif7" target="_blank"
+                        class="btn btn-primary my-2">Ubicación</a>
+
                 </div>
             </div>
         </section>
 
         <div class="album py-5 bg-body-tertiary">
             <div class="container">
-                <h3 class="playwrite-fr-moderne">Los 8 barrios de San Andres Cholula</h3>
+                <h3 class="playwrite-fr-moderne">Los barrios de San Andres Cholula</h3>
 
                 <p class="lead mb-4 mt-4 roboto-mono"> Cholula es una ciudad histórica en Puebla, México, conocida por
                     su Gran Pirámide, la más grande en volumen del mundo, coronada por la Iglesia de Nuestra Señora
@@ -49,7 +78,7 @@
                 <p>
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 roboto-mono">
                     <div class="col">
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm h-100 overflow-hidden rounded-4 shadow-lg">
                             <img src="../assets/SanJuan.jpg" alt="">
 
                             <div class="card-body">
@@ -67,7 +96,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm h-100 overflow-hidden rounded-4 shadow-lg">
                             <img src="../assets/SanMiguel.jpg" alt="">
 
                             <div class="card-body">
@@ -85,7 +114,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm h-100 overflow-hidden rounded-4 shadow-lg">
                             <img src="../assets/fondo.jpeg" alt="">
 
                             <div class="card-body">
@@ -102,7 +131,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm h-100 overflow-hidden rounded-4 shadow-lg">
                             <img src="../assets/SantaMaria.jpg" alt="">
 
                             <div class="card-body">
@@ -119,7 +148,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm h-100 overflow-hidden rounded-4 shadow-lg">
                             <img src="../assets/SanPedro.jpeg" alt="">
 
                             <div class="card-body">
@@ -136,7 +165,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm h-100 overflow-hidden rounded-4 shadow-lg">
                             <img src="../assets/SantoNiño.jpg" alt="">
 
                             <div class="card-body">
@@ -153,7 +182,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm h-100 overflow-hidden rounded-4 shadow-lg">
                             <img src="../assets/Santisima.jpeg" alt="">
 
                             <div class="card-body">
@@ -170,7 +199,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm h-100 overflow-hidden rounded-4 shadow-lg">
                             <img src="../assets/Santiago.jpg" alt="">
 
                             <div class="card-body">
@@ -187,20 +216,89 @@
                         </div>
                     </div>
 
-
-
-
-
-
-
                 </div>
             </div>
         </div>
-    </main>
-    <footer>
-        <div class="py-3">
-            <p class="text-center text-body-secondary">Desarrollado por Hugo y Marlem 2024 para WEB SEMANTICA</p>
+
+        <div class="container">
+            <h3 class="playwrite-fr-moderne">Ubicación</h3>
+            <div class="text-center mt-3 mb-3">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60345.88543580006!2d-98.33596052092531!3d19.036554382644976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc7c5f1be4ca9%3A0xf2c359adbc992fec!2sSan%20Andr%C3%A9s%20Cholula%2C%20Pue.!5e0!3m2!1ses-419!2smx!4v1723774949094!5m2!1ses-419!2smx"
+                width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" ></iframe>
+            </div>
+           
         </div>
+
+        <div class="container">
+            <h3 class="playwrite-fr-moderne mb-3">¡Agenda ahora!</h3>
+            <form action="https://example.com">
+                <label class="agenda mt-3 mb-3 roboto-mono">
+                  Selecciona tu dia de viaje:
+                  <input type="date" name="bday" />
+                </label>
+              
+                <p><button id="botonA">Confirmar</button></p>
+              </form>
+              
+        </div>
+
+
+    </main>
+
+    <footer id="contacto">
+        <div class="py-3">
+            <div class="text-center text-body-secondary fs-3">
+                <i class="bi bi-car-front fs-3"></i>
+            </div>
+
+        </div>
+
+        <h4 class="text-center text-body-secondary mt-3">"San Andrés Cholula es un tesoro cultural lleno de historia y
+            vida local."</h4>
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+
+            <li class="nav-item">
+                <a href="https://github.com/Marleemm" target="_blank" class="nav-link px-2 text-body-secondary">
+                    <i class="bi bi-github fs-2"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="mailto:marlemmartinezc@gmail.com" target="_blank"
+                    class="nav-link px-2 text-body-secondary fs-2">
+                    <i class="bi bi-envelope"></i>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a href="https://github.com/Hugo-Jesus-G" target="_blank" class="nav-link px-2 text-body-secondary">
+                    <i class="bi bi-github fs-2 text-white"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="mailto:hugogcc19@gmail.com" target="_blank" class="nav-link px-2 text-body-secondary fs-2">
+                    <i class="bi bi-envelope-open text-white"></i>
+                </a>
+            </li>
+
+            <!-- <li class="nav-item">
+                <a href="https://www.linkedin.com/in/marlem-mart%C3%ADnez-castillo-b7a8792aa/" target="_blank"
+                    class="nav-link px-2 text-body-secondary">
+                    <i class="bi bi-linkedin fs-2"></i>
+                </a>
+            </li> -->
+
+
+
+
+        </ul>
+
+        <p class="text-center text-body-secondary ">©2024, Marlem and Hugo, Web semantica</p>
+
     </footer>
 
 

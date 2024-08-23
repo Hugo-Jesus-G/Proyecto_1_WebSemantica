@@ -1,4 +1,7 @@
+
 <!DOCTYPE html>
+
+
 <html lang="es">
 
 <head>
@@ -234,15 +237,23 @@
 
         <div class="container">
             <h3 class="playwrite-fr-moderne mb-3">¡Agenda ahora!</h3>
-           
-            <form id="agendaForm">
-                <label class="agenda mt-3 mb-3 roboto-mono">
-                    Selecciona tu día de viaje:
-                    <input type="datetime-local" id="agenda" name="agenda">
-                    <input type="submit" value="Enviar">
-                </label>
+
+
+
+
+            <form id="agendaForm" action="../controladores/guardar_cita.php" method="post">
+                
+                <label for="fecha">Fecha de la cita:</label>
+                <input type="date" id="fecha" name="fecha" >
+                
+                <label for="hora">Hora de la cita:</label>
+                <input type="time" id="hora" name="hora" >
+                
+                
+                <button type="submit">Registrar Cita</button>
             </form>
-    
+            <a href="../controladores/guardar_cita.php">Probar Guardar Cita</a>
+
 
         </div>
 
@@ -306,26 +317,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById("agendaForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevenir el envío automático del formulario
-            
-            // Obtener la hora seleccionada
-            const horaSeleccionada = document.getElementById("agenda").value;
 
-            // Mostrar una alerta de confirmación
-            if (confirm(`¿Estás seguro de que quieres enviar la hora: ${horaSeleccionada}?`)) {
-                // Si el usuario confirma, se envía el formulario
-                this.submit();
-
-                // Mostrar un mensaje de registro exitoso
-                alert("Registro exitoso.");
-            } else {
-                // Si el usuario cancela, no se envía el formulario
-                alert("El envío fue cancelado.");
-            }
-        });
-    </script>
 </body>
 
 </html>

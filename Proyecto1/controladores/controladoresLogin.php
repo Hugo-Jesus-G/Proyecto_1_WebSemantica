@@ -1,39 +1,34 @@
 <?php
-
-// session_start();
+session_start();
 
 include("../conexiones/conexion.php");
 
 $conexion = conectar();
 
-
 if (isset($_POST['enviar'])) {
-
-    if ($_POST['usuario'] !==  "" && $_POST['contraseña'] !== "") {
-
-
+    if (!empty($_POST['usuario']) && !empty($_POST['contraseña'])) {
         $nombre = $_POST['usuario'];
         $pass = $_POST['contraseña'];
 
-        $consulta = "INSERT INTO usuario(nombre,contraseña) VALUES ('$nombre', '$pass')";
+        // Consulta para verificar la existencia del usuario
+        $consulta = "SELECT * FROM usuario WHERE nombre='$nombre' AND contraseña='$pass'";
+        $resultado = mysqli_query($conexion, $consulta);
 
+        if (mysqli_num_rows($resultado) > 0) {
+            // Obtener el usuario desde el resultado
+            $usuario = mysqli_fetch_assoc($resultado);
 
+            // Almacenar el ID del usuario en la sesión
+            $_SESSION['usuario_id'] = $usuario['id'];  // Suponiendo que la columna 'id' es el ID del usuario
 
-        $existencia = mysqli_query($conexion, "SELECT * FROM usuario WHERE nombre='$nombre' and contraseña='$pass'");
-
-        if (mysqli_num_rows($existencia) > 0) {
-            $_SESSION['nombre'] = $nombre;
-            $_SESSION['pass'] = $pass;
-          
-
-            header("location: ../pages/pagina.html");
+            // Redirigir al usuario a la página deseada
+            header("Location: ../pages/pagina.php");
+            exit();
         } else {
-
-            echo ("<div id='nombreR' class=' alert alert-danger p-1 mb-0 text-center' role='alert' >EL usuario No existe</div> <br>");
+            echo "<div class='alert alert-danger p-1 mb-0 text-center' role='alert'>El usuario no existe o la contraseña es incorrecta</div><br>";
         }
     } else {
-
-        echo ("<div id='nombreR' class=' alert alert-danger p-1 mb-0 text-center' role='alert' >Debes llenar los campos/div> <br>");
+        echo "<div class='alert alert-danger p-1 mb-0 text-center' role='alert'>Debes llenar los campos</div><br>";
     }
 }
 

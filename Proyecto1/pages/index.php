@@ -1,4 +1,15 @@
 
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario_id'])) {
+    echo "No se ha iniciado sesión.";
+} else {
+    echo "Usuario ID: " . $_SESSION['usuario_id'];
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 

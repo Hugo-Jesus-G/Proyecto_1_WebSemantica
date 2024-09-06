@@ -11,7 +11,7 @@ if (isset($_POST['enviar'])) {
         $pass = $_POST['contraseña'];
 
         // Consulta para verificar la existencia del usuario
-        $consulta = "SELECT * FROM usuario WHERE nombre='$nombre' AND contraseña='$pass'";
+        $consulta = "SELECT * FROM usuarios WHERE nombre='$nombre' AND contraseña='$pass'";
         $resultado = mysqli_query($conexion, $consulta);
 
         if (mysqli_num_rows($resultado) > 0) {
@@ -20,6 +20,7 @@ if (isset($_POST['enviar'])) {
 
             // Almacenar el ID del usuario en la sesión
             $_SESSION['usuario_id'] = $usuario['id'];  // Suponiendo que la columna 'id' es el ID del usuario
+            $_SESSION['nombre'] = $usuario['nombre'];  // Suponiendo que la columna 'id' es el ID del usuario
 
             // Redirigir al usuario a la página deseada
             header("Location: ../pages/pagina.php");

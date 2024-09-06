@@ -1,8 +1,7 @@
 <?php
 
-session_start();
 
-include("../conexiones/conexion.php");
+include ('../conexiones/conexion.php');
 
 $conexion = conectar();
 
@@ -13,26 +12,23 @@ if (isset($_POST['enviar'])) {
 
 
 
-    if ($_POST['usuario'] !== "" && $_POST['contraseña'] !== "") {
+    if ($_POST['usuario'] != "" && $_POST['contraseña'] != "") {
 
 
         $nombre = $_POST['usuario'];
      
         $pass = $_POST['contraseña'];
 
-        $consulta = "INSERT INTO usuario(nombre, contraseña) VALUES ('$nombre', '$pass')";
-
+        $consulta = "INSERT INTO `usuarios` (`id`, `nombre`, `contraseña`) VALUES (NULL, '$nombre', '$pass');";
+    
 
         $nombreValidar = false;
 
-        $verificar_nombre = mysqli_query($conexion, "SELECT * FROM usuario WHERE nombre='$nombre'");
+        $verificar_nombre = mysqli_query($conexion, "SELECT * FROM usuarios WHERE nombre='$nombre'");
 
         if (mysqli_num_rows($verificar_nombre) > 0) {
 
-
-
-
-            echo ("<div id='nombreR' class=' alert alert-danger p-1 my-0 text-center' role='alert' >EL nombre de usuario ya ha sido registrado</div> <br>");
+            echo ("<div id='nombreR' class=' alert alert-danger p-1 mb-0 text-center' role='alert' >EL nombre de usuario ya ha sido registrado</div> <br>");
         } else {
 
             $nombreValidar = true;
@@ -46,10 +42,11 @@ if (isset($_POST['enviar'])) {
 
             $respuesta = mysqli_query($conexion, $consulta);
 
+            
             if ($respuesta) {
 
 
-                echo ("<div id='exito' class='alert alert-success text-center my-0' role='alert'>Registrado correctamente</div> ");
+                echo ("<div id='exito' class='alert alert-success text-center mb-0' role='alert'>Registrado correctamente</div> ");
             } else {
 
 

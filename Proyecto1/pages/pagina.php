@@ -1,8 +1,14 @@
+<?php
+
+session_start();
+
+?>
+
+
 
 <!DOCTYPE html>
 
-
-<html lang="es">
+<html lang="es  ">
 
 <head>
     <meta charset="UTF-8">
@@ -239,20 +245,47 @@
             <h3 class="playwrite-fr-moderne mb-3">¡Agenda ahora!</h3>
 
 
+            <?php
+
+            echo "Usuario ID: " . $_SESSION['usuario_id'] . "<br>";
+
+            include("../controladores/controlador_guardar_cita.php");
+            $horas_disponibles = [
+                "09:00",
+                "10:00",
+                "11:00",
+                "12:00",
+                "13:00",
+                "14:00",
+                "15:00",
+                "16:00",
+                "17:00",
+                "18:00"
+            ];
+            ?>
 
 
-            <form id="agendaForm" action="../controladores/guardar_cita.php" method="post">
-                
+            <form id="agendaForm" method="post">
+
                 <label for="fecha">Fecha de la cita:</label>
-                <input type="date" id="fecha" name="fecha" >
-                
+                <input type="date" id="fecha" name="fecha" required>
+
                 <label for="hora">Hora de la cita:</label>
-                <input type="time" id="hora" name="hora" >
-                
-                
-                <button type="submit">Registrar Cita</button>
+                <select id="hora" name="hora" required>
+                    <?php
+                    foreach ($horas_disponibles as $hora) {
+                        echo "<option value=\"$hora\">$hora</option>";
+                    }
+                    ?>
+                </select><br>
+
+
+                <button type="submit" name="enviar-cita">Registrar Cita</button>
             </form>
-            <a href="../controladores/guardar_cita.php">Probar Guardar Cita</a>
+
+            <a href="mostrarCitas.php">Mostrar Citas</a>
+            <a href="login.php">Salir</a>
+
 
 
         </div>

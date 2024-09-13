@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citas</title>
+    <link rel="stylesheet" href="../styles/estilosTabla.css">
 
 </head>
 
 <body>
-    <h1>Mostrar Citas </h1>
+    <h1> Citas </h1>
     <table >
         <thead>
             <tr>
@@ -68,7 +69,7 @@
             ?>
         </tbody>
     </table>
-    <a href="pagina.php">Volver</a>
+    <a href="pagina.php" class="btn-volver">Volver</a>
 </body>
 
 </html>

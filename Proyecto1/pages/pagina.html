@@ -2,9 +2,12 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="San Andres">
+    <meta name="keywords" content="Tursmo, Cultura, religion, San Andres cholula"/>
+    <meta name="author" content="Hugo GC Y Marlem MC"/>
+    <meta name="description"
+        content="Turismo y cultura de San Andres cholulas, conoce los barrios y visitalos por medio de  nuestras citas" />
 
     <link rel="shortcut icon" href="../assets/icono.webp" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +31,7 @@
     <header>
         <nav class="navbar navbar-expand-lg  fixed-top" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand roboto-mono" href="#">H&M Trips</a>
+                <a class="navbar-brand roboto-mono" href="#"><img src="../assets/Huma.svg" height="55px" alt="huma"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -114,29 +117,14 @@
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="card shadow-sm h-100 overflow-hidden rounded-4 shadow-lg">
-                            <img src="../assets/fondo.jpeg" alt="">
 
-                            <div class="card-body">
-                                <p class="card-text">San Andresito es un barrio que refleja la expansión y modernización
-                                    de San Andrés Cholula. A pesar de ser más reciente en comparación con otros barrios,
-                                    ha desarrollado una identidad propia y es parte activa en las festividades y la vida
-                                    comunitaria de la región.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-
-                                    <small class="text-body-secondary">Barrio de San Andresito</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="col">
                         <div class="card shadow-sm h-100 overflow-hidden rounded-4 shadow-lg">
                             <img src="../assets/SantaMaria.jpg" alt="">
 
                             <div class="card-body">
-                                <p class="card-text">: Este barrio lleva el nombre de la Virgen María, en honor a quien
+                                <p class="card-text">Este barrio lleva el nombre de la Virgen María, en honor a quien
                                     se celebran importantes festividades religiosas. "Cuaco" es un término que puede
                                     referirse a la tierra de cultivo, reflejando la historia agrícola de la región.
                                     Santa María Cuaco conserva muchas de sus costumbres tradicionales.</p>
@@ -232,9 +220,9 @@
 
         </div>
 
-        <div class="container">
-            <h3 class="playwrite-fr-moderne mb-3">¡Agenda ahora!</h3>
-           
+        <div class="container mb-5">
+            <h3 class="playwrite-fr-moderne mb-3 mt-3">¡Agenda ahora!</h3>
+
             <form id="agendaForm">
                 <label class="agenda mt-3 mb-3 roboto-mono">
                     Selecciona tu día de viaje:
@@ -242,7 +230,7 @@
                     <input type="submit" value="Enviar">
                 </label>
             </form>
-    
+
 
         </div>
 
@@ -250,14 +238,8 @@
     </main>
 
     <footer id="contacto">
-        <div class="py-3">
-            <div class="text-center text-body-secondary fs-3">
-                <i class="bi bi-car-front fs-3"></i>
-            </div>
-
-        </div>
-
-        <h4 class="text-center text-body-secondary mt-3">"San Andrés Cholula es un tesoro cultural lleno de historia y
+        
+        <h4 class="text-center text-body-secondary mt-5 mb-3">"San Andrés Cholula es un tesoro cultural lleno de historia y
             vida local."</h4>
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
 
@@ -299,7 +281,7 @@
 
         </ul>
 
-        <p class="text-center text-body-secondary ">©2024, Marlem and Hugo, Web semantica</p>
+        <p class="text-center text-body-secondary ">©2024, HuMa</p>
 
     </footer>
 
@@ -307,9 +289,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.getElementById("agendaForm").addEventListener("submit", function(event) {
+        document.getElementById("agendaForm").addEventListener("submit", function (event) {
             event.preventDefault(); // Prevenir el envío automático del formulario
-            
+
             // Obtener la hora seleccionada
             const horaSeleccionada = document.getElementById("agenda").value;
 

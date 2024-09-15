@@ -1,5 +1,14 @@
+<?php
+
+session_start();
+
+?>
+
+
+
 <!DOCTYPE html>
-<html lang="es">
+
+<html lang="es  ">
 
 <head>
     <meta charset="UTF-8"/>
@@ -220,6 +229,7 @@
 
         </div>
 
+<<<<<<< HEAD:Proyecto1/pages/pagina.html
         <div class="container mb-5">
             <h3 class="playwrite-fr-moderne mb-3 mt-3">¡Agenda ahora!</h3>
 
@@ -231,6 +241,54 @@
                 </label>
             </form>
 
+=======
+        <div class="container">
+            <h3 class="playwrite-fr-moderne mb-3">¡Agenda ahora!</h3>
+
+
+            <?php
+
+            echo "Usuario ID: " . $_SESSION['usuario_id'] . "<br>";
+
+            include("../controladores/controlador_guardar_cita.php");
+            $horas_disponibles = [
+                "09:00",
+                "10:00",
+                "11:00",
+                "12:00",
+                "13:00",
+                "14:00",
+                "15:00",
+                "16:00",
+                "17:00",
+                "18:00"
+            ];
+            ?>
+
+
+            <form id="agendaForm" method="post">
+
+                <label for="fecha">Fecha de la cita:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="hora">Hora de la cita:</label>
+                <select id="hora" name="hora" required>
+                    <?php
+                    foreach ($horas_disponibles as $hora) {
+                        echo "<option value=\"$hora\">$hora</option>";
+                    }
+                    ?>
+                </select><br>
+
+
+                <button type="submit" name="enviar-cita">Registrar Cita</button>
+            </form>
+
+            <a href="mostrarCitas.php">Mostrar Citas</a>
+            <a href="login.php">Salir</a>
+
+
+>>>>>>> 8fe725eaa8d377be61bfc99fd2ddb1ff3daab73b:Proyecto1/pages/pagina.php
 
         </div>
 
@@ -288,26 +346,16 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<<<<<<< HEAD:Proyecto1/pages/pagina.html
     <script>
         document.getElementById("agendaForm").addEventListener("submit", function (event) {
             event.preventDefault(); // Prevenir el envío automático del formulario
 
             // Obtener la hora seleccionada
             const horaSeleccionada = document.getElementById("agenda").value;
+=======
+>>>>>>> 8fe725eaa8d377be61bfc99fd2ddb1ff3daab73b:Proyecto1/pages/pagina.php
 
-            // Mostrar una alerta de confirmación
-            if (confirm(`¿Estás seguro de que quieres enviar la hora: ${horaSeleccionada}?`)) {
-                // Si el usuario confirma, se envía el formulario
-                this.submit();
-
-                // Mostrar un mensaje de registro exitoso
-                alert("Registro exitoso.");
-            } else {
-                // Si el usuario cancela, no se envía el formulario
-                alert("El envío fue cancelado.");
-            }
-        });
-    </script>
 </body>
 
 </html>
